@@ -1,0 +1,26 @@
+/* A freer composition for the first screen; all rules are scoped to the hero. */
+.hero.hero-playful{position:relative;display:block;isolation:isolate;--hero-display:Charter,'Bitstream Charter',Baskerville,'Times New Roman',serif;--hero-chinese:'Songti SC','Noto Serif SC','STSong',serif;min-height:640px;padding-top:34px;padding-bottom:48px;overflow:clip}
+.hero-playful .hero-affiliation{margin:0;font-size:10px;letter-spacing:1.15px}
+.hero-playful h1{position:relative;z-index:2;margin:115px 0 0;font-family:var(--hero-display);font-size:clamp(60px,6.5vw,86px);line-height:1.12;letter-spacing:-.025em;font-weight:400;pointer-events:none}
+.hero-playful .hero-line-first{display:block;width:fit-content;white-space:nowrap}
+.hero-playful .hero-line-last{display:block;width:fit-content;margin:40px 0 0 25%;font-family:var(--hero-display);font-style:italic;font-size:1em;letter-spacing:-.025em;color:var(--accent)}
+.hero-playful .hero-introduction{position:relative;z-index:3;margin-top:32px;max-width:330px}
+.hero-playful .hero-field{font-size:13px;font-weight:500;margin-bottom:8px}
+.hero-playful .hero-description{font-size:13px;line-height:1.85;max-width:315px}
+.hero-sculpture{position:absolute;z-index:1;right:9px;top:22px;width:43%;height:320px;pointer-events:none}
+.hero-sculpture canvas,.sculpture-fallback{display:block;width:100%;height:100%}
+.hero-sculpture canvas{position:absolute;inset:0;opacity:0}
+.hero-sculpture.has-canvas canvas{opacity:1}
+.hero-sculpture.has-canvas .sculpture-fallback{visibility:hidden}
+
+.hero-motion-toggle{position:absolute;bottom:27px;right:40px;display:flex;align-items:center;gap:8px;padding:7px 0 7px 9px;border:0;background:none;font-size:10px;color:var(--muted);z-index:4}
+.hero-motion-toggle[hidden]{display:none}
+.hero-motion-toggle:hover{color:var(--accent)}
+.motion-glyph{font-family:Arial,sans-serif;font-size:12px;width:12px;text-align:center}
+
+html[lang=zh-CN] .hero-playful h1{font-family:var(--hero-chinese);font-size:clamp(48px,5.2vw,70px);font-weight:600;line-height:1.5;letter-spacing:.045em}
+html[lang=zh-CN] .hero-playful .hero-line-last{font-family:var(--hero-chinese);font-style:normal;font-size:1em;letter-spacing:.045em;margin-top:24px}
+@media(max-width:1000px){.hero.hero-playful{min-height:620px}.hero-playful h1{font-size:clamp(52px,7vw,70px);letter-spacing:-.025em}.hero-playful .hero-line-last{letter-spacing:-.025em;margin-left:20%}.hero-sculpture{width:46%;top:22px;right:0;height:310px}.hero-playful .hero-introduction{max-width:300px;margin-top:35px}}
+@media(max-width:760px){.hero.hero-playful{min-height:640px;padding-top:27px;padding-bottom:42px}.hero-playful h1{font-size:clamp(44px,7vw,53px);margin-top:200px;letter-spacing:-.025em}.hero-playful .hero-line-last{margin-top:22px;margin-left:9%;letter-spacing:-.025em}.hero-sculpture{top:13px;right:9px;width:58%;height:272px}.hero-playful .hero-affiliation{font-size:9px;max-width:190px;line-height:1.8}.hero-playful .hero-introduction{margin-top:39px;max-width:300px}.hero-playful .hero-description{font-size:13px}.hero-motion-toggle{right:24px;bottom:22px}html[lang=zh-CN] .hero-playful h1{font-size:48px;line-height:1.5}}
+@media(max-width:480px){.hero.hero-playful{min-height:620px;padding-top:24px}.hero-playful h1{font-size:clamp(33px,10.6vw,48px);margin-top:200px;letter-spacing:-.035em}.hero-playful .hero-line-last{margin-top:20px;margin-left:8%;font-size:.88em;letter-spacing:-.025em;white-space:nowrap}.hero-sculpture{width:72%;height:256px;top:23px;right:-7px}.hero-playful .hero-introduction{margin-top:39px;max-width:276px}.hero-playful .hero-description{max-width:270px;font-size:12px}.hero-playful .hero-field{font-size:12px}.hero-playful .hero-affiliation{max-width:155px;font-size:8px;letter-spacing:1px}.hero-motion-toggle{font-size:10px;bottom:20px;right:24px}html[lang=zh-CN] .hero-playful h1{font-size:clamp(30px,8.3vw,38px);letter-spacing:.04em;margin-top:199px}html[lang=zh-CN] .hero-playful .hero-line-last{margin-left:18%;margin-top:18px;letter-spacing:.04em}}
+@media(prefers-reduced-motion:reduce){.hero-playful .hero-motion-toggle{display:none}}
