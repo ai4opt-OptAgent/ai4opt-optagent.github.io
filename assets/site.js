@@ -31,6 +31,9 @@
     document.querySelectorAll('[data-en][data-zh]').forEach(element => {
       element.textContent = element.dataset[language].replace(/\\n/g, '\n');
     });
+    document.querySelectorAll('[data-alt-en][data-alt-zh]').forEach(element => {
+      element.alt = language === 'zh' ? element.dataset.altZh : element.dataset.altEn;
+    });
     document.querySelectorAll('[data-placeholder-en]').forEach(element => {
       element.placeholder = language === 'zh' ? element.dataset.placeholderZh : element.dataset.placeholderEn;
     });

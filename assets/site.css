@@ -23,3 +23,29 @@ html[lang=zh-CN] :is(.news-row a,.research-card p,.about-copy,.paper-explainer p
 html[lang=zh-CN] :is(.publication-body h3,.person h3){line-height:1.6;letter-spacing:0}
 .card-meta{flex-wrap:wrap;min-height:3em}.person-links{line-height:1.75}.paper-explainer .eyebrow{letter-spacing:.4px}
 @media(max-width:480px){.card-meta{min-height:0}.news-row{grid-template-columns:66px minmax(0,1fr);gap:14px}.card-meta{gap:6px 12px}.selected-section .section-heading>.text-link{max-width:115px;flex-shrink:0}.footer-bottom{flex-wrap:wrap;gap:6px 20px}}
+
+/* Paper introductions with original figures and verified findings. */
+.paper-thumbnail{display:block;width:100%;height:auto;aspect-ratio:360/196;object-fit:contain;padding:10px;background:#fff}
+.paper-page--detailed .paper-lead{margin-top:36px;max-width:880px}
+.paper-page--detailed .paper-lead p{font-family:var(--sans);font-size:22px;line-height:1.65;letter-spacing:0}
+.paper-framework{margin:34px 0 0}
+.paper-framework>a{display:block;border:1px solid var(--rule);padding:18px;background:#fff}
+.paper-framework-image{display:block;width:100%;height:auto}
+.paper-framework figcaption{margin-top:16px;max-width:940px;font-size:14px;line-height:1.8;color:var(--muted)}
+.figure-source{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:9px;font-size:12px}
+.figure-source a,.finding-source{color:var(--accent)}
+.figure-source .external-arrow,.finding-source .external-arrow{margin-left:6px}
+.paper-page--detailed .paper-explainers{display:block;margin:46px 0}
+.paper-page--detailed .paper-explainer{display:grid;grid-template-columns:190px minmax(0,1fr);gap:40px;padding:28px 0}
+.paper-section-title{margin:0;font-size:17px;line-height:1.6;letter-spacing:0;font-weight:500}
+.paper-page--detailed .paper-explainer p{max-width:78ch;line-height:1.85}
+.paper-findings{margin-top:20px;border-top:1px solid var(--rule);padding-top:32px}
+.paper-findings h2{font-size:27px;letter-spacing:-.5px}
+.findings-context{font-size:14px;color:var(--muted);line-height:1.85;max-width:900px;margin-top:18px}
+.findings-list{margin-top:25px}
+.finding{display:grid;grid-template-columns:190px minmax(0,1fr);gap:10px 40px;padding:25px 0;border-top:1px solid var(--rule)}
+.finding h3{font-size:17px;line-height:1.6;letter-spacing:0;margin:0}
+.finding p{font-size:16px;line-height:1.85;max-width:78ch;color:var(--muted)}
+.finding-source{grid-column:2;font-size:13px;justify-self:start}
+html[lang=zh-CN] .paper-page--detailed :is(.paper-lead p,.paper-explainer p,.finding p){line-height:1.9}
+@media(max-width:760px){.paper-page--detailed .paper-lead p{font-size:20px}.paper-page--detailed .paper-explainer,.finding{grid-template-columns:1fr;gap:12px}.finding-source{grid-column:1}.paper-framework>a{padding:8px}.paper-framework figcaption{font-size:13px}.figure-source{font-size:12px}.paper-page--detailed .paper-explainers{margin-top:32px}}
